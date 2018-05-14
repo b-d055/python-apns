@@ -59,7 +59,7 @@ class APNsClient(object):
                 raise ImproperlyConfigured("The APNS auth key file at %r is not readable: %s" % (auth_key_filepath, e))
 
         validate_private_key(auth_key)
-        auth_key = wrap_private_key(auth_key) # Some have had issues with keys that aren't wrappd to 64 lines
+#         auth_key = wrap_private_key(auth_key) # Some have had issues with keys that aren't wrappd to 64 lines
 
         self.team_id = team_id
         self.bundle_id = bundle_id
